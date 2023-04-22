@@ -2,10 +2,10 @@
 <h1 align = "center">
   BTI/UFRN 2023.1 - Linguagem de Programação I: Exercícios
   
-  <!-- <p align="center">
-    <img src="https://img.shields.io/github/last-commit/JosManoel/ITP-2022.2-BTI-UFRN">
-    <img src="https://img.shields.io/github/license/JosManoel/ITP-2022.2-BTI-UFRN">
-  </p> -->
+  <p align="center">
+    <img src="https://img.shields.io/github/last-commit/JosManoel/LP1-2023.1-BTI-UFRN">
+    <img src="https://img.shields.io/github/license/JosManoel/LP1-2023.1-BTI-UFRN">
+  </p>
 </h1>
 
 <p align ="center">
@@ -37,7 +37,7 @@ A matéria de Linguagem de Programação I dá continuidade aos tópicos aprendi
 
 <h2 id="licenca">📝 Licença</h2>
 
-- Este projeto está sob a licença [MIT](https://github.com/JosManoel/ITP-2022.2-BTI-UFRN/blob/main/LICENSE).
+- Este projeto está sob a licença [MIT](https://github.com/JosManoel/LP1-2023.1-BTI-UFRN/blob/main/LICENSE).
 
 ***
 
