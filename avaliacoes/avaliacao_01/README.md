@@ -1,7 +1,5 @@
 # 📝 Atividade avaliativa - Projeto C
 
-**Aluno:** José Manoel Freitas da Silva **Mat.:** 20220039467
-
 ***
 
 ## 👨🏻‍💻 Sobre este projeto

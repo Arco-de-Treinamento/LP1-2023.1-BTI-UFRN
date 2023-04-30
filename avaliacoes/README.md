@@ -1,4 +1,4 @@
-# 🎓 Avaliações semanais
+# 🎓 Avaliações
 
 
 As avaliações semanais abordam os temas estudados durante a semana, apresentando questões com um nível de dificuldade superior às listas semanais. 
