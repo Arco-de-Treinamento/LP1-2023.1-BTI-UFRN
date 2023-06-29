@@ -31,3 +31,4 @@ float Asg::calcularRecisao(Data desligamento){
     float valorRecisao = totalAnos * getSalario();
     return valorRecisao;
 }
+
