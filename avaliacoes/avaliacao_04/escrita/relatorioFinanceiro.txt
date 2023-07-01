@@ -2,7 +2,8 @@
 Nome: Pedro Cunha de Araujo - R$ 1584
 Nome: Jorge Pereira Linhares - R$ 1378
 Nome: Antonio Augusto de Souza Filho - R$ 1320
-Soma ASGs: 4208.75
+Nome: Pedro de Araujo - R$ 1320
+Soma ASGs: 5502.35
 
 ##########    Vendedores    ##########
 Nome: Andre de Albuquerque de Souza - R$ 2200
@@ -17,5 +18,7 @@ Nome: Marcus Aurelius de Souza - R$ 1500
 Soma Gerentes: 1500
 
 **************************** 
-Soma de salarios: 38092.2
+Soma de salarios: 43594.6
+**************************** 
+Lucro mensal: 112695
 **************************** 

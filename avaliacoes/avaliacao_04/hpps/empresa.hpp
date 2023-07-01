@@ -31,7 +31,7 @@ public:
   void setCnpj(std::string cnpj);
   void carregaFuncoes();
   void contratarFuncionario();
-  void demitirFuncionario();
+  void demitirFuncionario(std::string matricula, Data desligamento);
   void carregarEmpresa();
   void carregarAsg();
   void carregarVendedor();

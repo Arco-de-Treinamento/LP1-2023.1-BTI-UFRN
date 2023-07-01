@@ -97,18 +97,18 @@ void Empresa::carregaFuncoes(){
                 calculaSalarioFuncionario(matricula);
             }else if(temp[i] == "calculaTodoOsSalarios()"){
                 calculaTodoOsSalarios();
-            }else if(temp[i] == "calcularRescisao()"){
+            }else if(temp[i] == "contratarFuncionario()"){
+                contratarFuncionario();
+            }else if(temp[i] == "demitirFuncionario()"){
                 string matricula = temp[i+1];
                 Data desligamento;
+                
                 desligamento.ano = stoi(temp[i+2]);
                 desligamento.mes = stoi(temp[i+3]);
                 desligamento.dia = stoi(temp[i+4]);
                 i+=4;
-                calcularRescisao(matricula, desligamento);
-            }else if(temp[i] == "contratarFuncionario()"){
-                //Novo funcionario
-            }else if(temp[i] == "demitirFuncionario()"){
-                //Demitir funcionario
+
+                demitirFuncionario(matricula, desligamento);
             }
         }
     }catch(exception &erro){
@@ -116,7 +116,7 @@ void Empresa::carregaFuncoes(){
     } 
 }
 
-
+// Funcao implementada na avaliacao 03
 void Empresa::contratarFuncionario(){
     try{
         fstream arquivo;
@@ -131,24 +131,131 @@ void Empresa::contratarFuncionario(){
 
         arquivo.close();
         tipoFuncionario = temp[0];
-        cout << "tipo funcionario: " << tipoFuncionario << endl;
-
+        
         if(tipoFuncionario == "ASG"){
+            Asg tAsg;
+            
+            tAsg.setNome(temp[2]);
+            tAsg.setCpf(temp[3]);
+            tAsg.setQtdFilhos(stoi(temp[4]));
+            tAsg.setEstadoCivil(temp[5]);
+
+            Endereco tEnd;
+            tEnd.cidade = temp[7];
+            tEnd.cep = temp[8];
+            tEnd.bairro = temp[9];
+            tEnd.rua = temp[10];
+            tEnd.numero = stoi(temp[11]);
+            tAsg.setEndereco(tEnd);
+
+            Data tNasc;
+            tNasc.ano = stoi(temp[13]);
+            tNasc.mes = stoi(temp[14]);
+            tNasc.dia = stoi(temp[15]);
+            tAsg.setDataNascimento(tNasc);
+
+            tAsg.setMatricula(temp[17]);
+            tAsg.setSalario(stof(temp[18]));
+            tAsg.setAdcionalInsabubridade(stof(temp[19]));
+            tAsg.setDiasFaltas(stoi(temp[20]));
+
+            Data tIng;
+            tIng.ano = stoi(temp[22]);
+            tIng.mes = stoi(temp[23]);
+            tIng.dia = stoi(temp[24]);
+
+            tAsg.setDataingresso(tIng);
+
+            asgs.push_back(tAsg);
 
         }else if(tipoFuncionario == "Vendedor"){
-        
+            Vendedor tVendedor;
+
+            tVendedor.setNome(temp[2]);
+            tVendedor.setCpf(temp[3]);
+            tVendedor.setQtdFilhos(stoi(temp[4]));
+            tVendedor.setEstadoCivil(temp[5]);
+
+            Endereco tEnd;
+            tEnd.cidade = temp[7];
+            tEnd.cep = temp[8];
+            tEnd.bairro = temp[9];
+            tEnd.rua = temp[10];
+            tEnd.numero = stoi(temp[11]);
+            tVendedor.setEndereco(tEnd);
+
+            Data tNasc;
+            tNasc.ano = stoi(temp[13]);
+            tNasc.mes = stoi(temp[14]);
+            tNasc.dia = stoi(temp[15]);
+            tVendedor.setDataNascimento(tNasc);
+
+            tVendedor.setMatricula(temp[17]);
+            tVendedor.setSalario(stof(temp[18]));
+            tVendedor.setTipoVendedor(temp[19]);
+            tVendedor.setDiasFaltas(stoi(temp[20]));
+
+            Data tIng;
+            tIng.ano = stoi(temp[22]);
+            tIng.mes = stoi(temp[23]);
+            tIng.dia = stoi(temp[24]);
+
+            tVendedor.setDataingresso(tIng);
+
+            vendedores.push_back(tVendedor);
         }else if(tipoFuncionario == "Gerente"){
-        
+            Gerente tVendedor;
+
+            tVendedor.setNome(temp[2]);
+            tVendedor.setCpf(temp[3]);
+            tVendedor.setQtdFilhos(stoi(temp[4]));
+            tVendedor.setEstadoCivil(temp[5]);
+
+            Endereco tEnd;
+            tEnd.cidade = temp[7];
+            tEnd.cep = temp[8];
+            tEnd.bairro = temp[9];
+            tEnd.rua = temp[10];
+            tEnd.numero = stoi(temp[11]);
+            tVendedor.setEndereco(tEnd);
+
+            Data tNasc;
+            tNasc.ano = stoi(temp[13]);
+            tNasc.mes = stoi(temp[14]);
+            tNasc.dia = stoi(temp[15]);
+            tVendedor.setDataNascimento(tNasc);
+
+            tVendedor.setMatricula(temp[17]);
+            tVendedor.setSalario(stof(temp[18]));
+            tVendedor.setParticipacaoLucros(stof(temp[19]));
+            tVendedor.setDiasFaltas(stoi(temp[20]));
+
+            Data tIng;
+            tIng.ano = stoi(temp[22]);
+            tIng.mes = stoi(temp[23]);
+            tIng.dia = stoi(temp[24]);
+
+            tVendedor.setDataingresso(tIng);
+
+            gerentes.push_back(tVendedor);
         }else{
             cout << "Não foi possivel encontrar o tipo do funcionário." << endl;
+            return;
         }
 
     }catch(exception &erro){
         cout << "Não foi possivel abrir arquivo do novo funcionário. Erro: " << erro.what() << endl;
+        return;
     }
 }
 
-void Empresa::demitirFuncionario(){};
+// Funcao implementada na avaliacao 03
+void Empresa::demitirFuncionario(string matricula, Data desligamento){
+    cout << "\n##########    Calculando a rescisão de funcionário    ##########" <<endl;
+
+    calcularRescisao(matricula, desligamento);
+    return;
+};
 
 void Empresa::carregarEmpresa(){
     try{
@@ -477,11 +584,10 @@ void Empresa::calculaSalarioFuncionario(string matricula){
 }
 
 void Empresa::calculaTodoOsSalarios(){
-
     fstream relatorio;
     relatorio.open("./escrita/relatorioFinanceiro.txt", ios::out);
 
-    float soma = 0, somaAsg = 0, somaVend = 0, somaGer = 0;
+    float soma = 0, somaAsg = 0, somaVend = 0, somaGer = 0,lucro = 0;
 
     cout << "\n##########    Calculando todos os salários    ##########" <<endl;
     relatorio << "##########    ASGS    ##########" << endl;
@@ -504,44 +610,116 @@ void Empresa::calculaTodoOsSalarios(){
         somaGer += gerentes[i].calcularSalario(gerentes[i].getDiasFaltas());
         soma += somaGer;
     }
+
+    lucro = faturamentoMensal - soma;
+
     relatorio << "Soma Gerentes: " << somaGer << endl;
     relatorio << endl;
     relatorio << "**************************** " << endl;
     relatorio << "Soma de salarios: " << soma << endl;
+    relatorio << "**************************** " << endl;    
+    relatorio << "Lucro mensal: " << lucro << endl;
     relatorio << "**************************** " << endl;
 
     cout  << "Soma dos salarios calculados: "<< soma << endl;
-
+    cout  << "Lucro mensal: " << lucro << endl;
 }
 
+// FUncao criada na avaliacao 03
+string tempoTrabalho(Data ingresso, Data desligamento){
+    int anos = 0, meses = 0, dias = 0;
+
+    // Verificar se o dia do ingresso é maior que o dia do desligamento
+    // Considera um mes de 30 dias
+    if (ingresso.dia > desligamento.dia) {
+        dias = 30 - ingresso.dia + desligamento.dia;
+        meses--;
+    } else {
+        dias = desligamento.dia - ingresso.dia;
+    }
+
+    // Verificar se o mês do ingresso é maior que o mês do desligamento
+    if (ingresso.mes > desligamento.mes) {
+        meses = 12 - ingresso.mes + desligamento.mes;
+        anos--;
+    } else {
+        meses = desligamento.mes - ingresso.mes;
+    }
+
+    anos = desligamento.ano - ingresso.ano;
+
+    return (to_string(anos) + " anos, " + to_string(meses) + " meses e " + to_string(dias) + " dias");
+}
+
+// Funcao editada na avaliacao 03
 void Empresa::calcularRescisao(string matricula, Data desligamento){
-    cout << "\n##########    Calculando a rescisão de funcionário    ##########" <<endl;
+    fstream relatorioDem;
+    relatorioDem.open("./escrita/relatorioDemissional.txt", ios::out);
+
+    relatorioDem << "##############################" << endl;
+    relatorioDem << "    Relatorio Demissional" << endl;
+    relatorioDem << "##############################" << endl;
+
     for(int i = 0; i<asgs.size() ;i++){
         if(matricula == asgs[i].getMatricula()){
-            cout << "Função: ASG" << endl;
+            cout << "Cargo: ASG" << endl;
             cout << "Nome: " << asgs[i].getNome() << endl;
-            cout << "Salario base: " << asgs[i].getSalario() << endl;
-            cout << "Rescisão calculada: " << asgs[i].calcularRecisao(desligamento) << endl;
+            cout << "CPF: " << asgs[i].getCpf() << endl;
+            cout << "Matricula: " << asgs[i].getMatricula() << endl;
+            cout << "Valor de rescisão: R$ " << asgs[i].calcularRecisao(desligamento) << endl;
+
+            relatorioDem << "Cargo: ASG" << endl;
+            relatorioDem << "Nome: " << asgs[i].getNome() << endl;
+            relatorioDem << "CPF: " << asgs[i].getCpf() << endl;
+            relatorioDem << "Matricula: " << asgs[i].getMatricula() << endl;
+            relatorioDem << "******************************" << endl;
+            relatorioDem << "Valor de rescisão: R$ " << asgs[i].calcularRecisao(desligamento) << endl;
+            relatorioDem << "******************************" << endl;
+            relatorioDem << "Tempo de trabalho: " << tempoTrabalho(asgs[i].getDataingresso(),desligamento) << endl;
+
             return;
         }
     }
     for(int i = 0; i<vendedores.size() ;i++){
         if(matricula == vendedores[i].getMatricula()){
-            cout << "Função: Vendedor" << endl;
+            cout << "Cargo: Vendedor" << endl;
             cout << "Nome: " << vendedores[i].getNome() << endl;
-            cout << "Salario base: " << vendedores[i].getSalario() << endl;
-            cout << "Rescisão calculada: " << vendedores[i].calcularRecisao(desligamento) << endl;
+            cout << "CPF: " << vendedores[i].getCpf() << endl;
+            cout << "Matricula: " << vendedores[i].getMatricula() << endl;
+            cout << "Valor de rescisão: R$ " << vendedores[i].calcularRecisao(desligamento) << endl;
+
+            relatorioDem << "Cargo: Vendedor" << endl;
+            relatorioDem << "Nome: " << vendedores[i].getNome() << endl;
+            relatorioDem << "CPF: " << vendedores[i].getCpf() << endl;
+            relatorioDem << "Matricula: " << vendedores[i].getMatricula() << endl;
+            relatorioDem << "******************************" << endl;
+            relatorioDem << "Valor de rescisão: R$ " << vendedores[i].calcularRecisao(desligamento) << endl;
+            relatorioDem << "******************************" << endl;
+            relatorioDem << "Tempo de trabalho: " << tempoTrabalho(vendedores[i].getDataingresso(),desligamento) << endl;
+
             return;
         }
     }
     for(int i = 0; i<gerentes.size() ;i++){
         if(matricula == gerentes[i].getMatricula()){
-            cout << "Função: Gerente" << endl;
+            cout << "Cargo: Gerente" << endl;
             cout << "Nome: " << gerentes[i].getNome() << endl;
-            cout << "Salario base: " << gerentes[i].getSalario() << endl;
-            cout << "Rescisão calculada: " << gerentes[i].calcularRecisao(desligamento) << endl;
+            cout << "CPF: " << gerentes[i].getCpf() << endl;
+            cout << "Matricula: " << gerentes[i].getMatricula() << endl;
+            cout << "Valor de rescisão: R$ " << gerentes[i].calcularRecisao(desligamento) << endl;
+
+            relatorioDem << "Cargo: Gerente" << endl;
+            relatorioDem << "Nome: " << gerentes[i].getNome() << endl;
+            relatorioDem << "CPF: " << gerentes[i].getCpf() << endl;
+            relatorioDem << "Matricula: " << gerentes[i].getMatricula() << endl;
+            relatorioDem << "******************************" << endl;
+            relatorioDem << "Valor de rescisão: R$ " << gerentes[i].calcularRecisao(desligamento) << endl;
+            relatorioDem << "******************************" << endl;
+            relatorioDem << "Tempo de trabalho: " << tempoTrabalho(gerentes[i].getDataingresso(),desligamento) << endl;
+
             return;
         }
     }
+
     cout  << "Funcionario não localizado no sistema!" << endl;
 }
