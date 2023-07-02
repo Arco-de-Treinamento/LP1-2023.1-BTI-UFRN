@@ -1,0 +1,43 @@
+\doxysection{funcionario.\+hpp}
+\hypertarget{funcionario_8hpp_source}{}\label{funcionario_8hpp_source}\index{hpps/funcionario.hpp@{hpps/funcionario.hpp}}
+\mbox{\hyperlink{funcionario_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ FUNCIONARIO\_HPP}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ FUNCIONARIO\_HPP}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{util_8hpp}{util.hpp}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFuncionario}{Funcionario}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{float}\ salario;\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ diasFaltas;\ }
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ matricula;\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ ingressoEmpresa;\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classFuncionario_ae36c15cd6c61177d50cc6bf5b96c05a6}{calcularSalario}}(\textcolor{keywordtype}{int}\ diasFaltas)\ =\ 0;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classFuncionario_a1aa96ac8c4f6c5e9af559d9b94d37b46}{calcularRecisao}}(\mbox{\hyperlink{structData}{Data}}\ desligamento)\ =\ 0;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classFuncionario_a98d5aef3daa877847e45e6ff34c7dcf8}{getSalario}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ std::string\ \mbox{\hyperlink{classFuncionario_aa856c33b14140e29182dd8c3893ad6ec}{getMatricula}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{structData}{Data}}\ \mbox{\hyperlink{classFuncionario_a177dc35b03e4b5c6153f1851b135ca03}{getDataingresso}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFuncionario_a22aca68fbdc2f1dec77ba429eabec4d3}{setSalario}}(\textcolor{keywordtype}{float}\ salario);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}{setMatricula}}(std::string\ matricula);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFuncionario_a93767189bf19980f4d2b4bb69c5a3f6e}{setDataingresso}}(\mbox{\hyperlink{structData}{Data}}\ ingressoEmpresa);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFuncionario_ae8ecbd719934a689316fe307baf11eb9}{getDiasFaltas}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classFuncionario_a4c0675b260f197dcb47d52f8b4542e9f}{setDiasFaltas}}(\textcolor{keywordtype}{int}\ diasFaltas);}
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00090\ }
+
+\end{DoxyCode}

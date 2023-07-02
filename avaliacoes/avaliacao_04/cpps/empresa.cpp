@@ -625,7 +625,7 @@ void Empresa::calculaTodoOsSalarios(){
     cout  << "Lucro mensal: " << lucro << endl;
 }
 
-// FUncao criada na avaliacao 03
+// Funcao privada criada na avaliacao 03
 string tempoTrabalho(Data ingresso, Data desligamento){
     int anos = 0, meses = 0, dias = 0;
 

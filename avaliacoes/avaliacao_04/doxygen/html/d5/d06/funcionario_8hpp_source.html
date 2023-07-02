@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Atacadão dos calçados - Gestão financeira: Código-Fonte de hpps/funcionario.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Atacadão dos calçados - Gestão financeira<span id="projectnumber">&#160;3.1</span>
+   </div>
+   <div id="projectbrief">Esse projeto consiste na criação de um sistema para gerenciamento de funcionários da empresa Atacadão dos Calçados. Sua função é gerir toda a parte financeira da empresa com base nos dados enviados através de arquivos.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "../../search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('../../',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_f7b92e2938bcf0009b10320b0bbab72f.html">hpps</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">funcionario.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="../../d5/d06/funcionario_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef FUNCIONARIO_HPP</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define FUNCIONARIO_HPP</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/d3f/util_8hpp.html">util.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../d2/de9/classFuncionario.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d2/de9/classFuncionario.html">Funcionario</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">float</span> salario; </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">int</span> diasFaltas; </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::string matricula; </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_struct" href="../../d4/ddc/structData.html">Data</a> ingressoEmpresa; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="../../d2/de9/classFuncionario.html#ae36c15cd6c61177d50cc6bf5b96c05a6">   31</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code hl_function" href="../../d2/de9/classFuncionario.html#ae36c15cd6c61177d50cc6bf5b96c05a6">calcularSalario</a>(<span class="keywordtype">int</span> diasFaltas) = 0;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="../../d2/de9/classFuncionario.html#a1aa96ac8c4f6c5e9af559d9b94d37b46">   38</a></span>    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code hl_function" href="../../d2/de9/classFuncionario.html#a1aa96ac8c4f6c5e9af559d9b94d37b46">calcularRecisao</a>(<a class="code hl_struct" href="../../d4/ddc/structData.html">Data</a> desligamento) = 0;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="../../d2/de9/classFuncionario.html#a98d5aef3daa877847e45e6ff34c7dcf8">getSalario</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::string <a class="code hl_function" href="../../d2/de9/classFuncionario.html#aa856c33b14140e29182dd8c3893ad6ec">getMatricula</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_struct" href="../../d4/ddc/structData.html">Data</a> <a class="code hl_function" href="../../d2/de9/classFuncionario.html#a177dc35b03e4b5c6153f1851b135ca03">getDataingresso</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/de9/classFuncionario.html#a22aca68fbdc2f1dec77ba429eabec4d3">setSalario</a>(<span class="keywordtype">float</span> salario);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/de9/classFuncionario.html#ac9ddaedaa41e63ddd1a30f68c992bdfb">setMatricula</a>(std::string matricula);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/de9/classFuncionario.html#a93767189bf19980f4d2b4bb69c5a3f6e">setDataingresso</a>(<a class="code hl_struct" href="../../d4/ddc/structData.html">Data</a> ingressoEmpresa);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d2/de9/classFuncionario.html#ae8ecbd719934a689316fe307baf11eb9">getDiasFaltas</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d2/de9/classFuncionario.html#a4c0675b260f197dcb47d52f8b4542e9f">setDiasFaltas</a>(<span class="keywordtype">int</span> diasFaltas);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>};</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="ttc" id="aclassFuncionario_html"><div class="ttname"><a href="../../d2/de9/classFuncionario.html">Funcionario</a></div><div class="ttdoc">Classe abstrata que representa um Funcionário.</div><div class="ttdef"><b>Definição</b> funcionario.hpp:18</div></div>
+<div class="ttc" id="aclassFuncionario_html_a177dc35b03e4b5c6153f1851b135ca03"><div class="ttname"><a href="../../d2/de9/classFuncionario.html#a177dc35b03e4b5c6153f1851b135ca03">Funcionario::getDataingresso</a></div><div class="ttdeci">Data getDataingresso()</div><div class="ttdoc">Obtém a data de ingresso do Funcionário na empresa.</div><div class="ttdef"><b>Definição</b> funcionario.cpp:14</div></div>
+<div class="ttc" id="aclassFuncionario_html_a1aa96ac8c4f6c5e9af559d9b94d37b46"><div class="ttname"><a href="../../d2/de9/classFuncionario.html#a1aa96ac8c4f6c5e9af559d9b94d37b46">Funcionario::calcularRecisao</a></div><div class="ttdeci">virtual float calcularRecisao(Data desligamento)=0</div><div class="ttdoc">Calcula o valor da rescisão do Funcionário com base na data de desligamento.</div></div>
+<div class="ttc" id="aclassFuncionario_html_a22aca68fbdc2f1dec77ba429eabec4d3"><div class="ttname"><a href="../../d2/de9/classFuncionario.html#a22aca68fbdc2f1dec77ba429eabec4d3">Funcionario::setSalario</a></div><div class="ttdeci">void setSalario(float salario)</div><div class="ttdoc">Define o valor do salário do Funcionário.</div><div class="ttdef"><b>Definição</b> funcionario.cpp:18</div></div>
+<div class="ttc" id="aclassFuncionario_html_a4c0675b260f197dcb47d52f8b4542e9f"><div class="ttname"><a href="../../d2/de9/classFuncionario.html#a4c0675b260f197dcb47d52f8b4542e9f">Funcionario::setDiasFaltas</a></div><div class="ttdeci">void setDiasFaltas(int diasFaltas)</div><div class="ttdoc">Define o número de dias de faltas do Funcionário.</div><div class="ttdef"><b>Definição</b> funcionario.cpp:33</div></div>
+<div class="ttc" id="aclassFuncionario_html_a93767189bf19980f4d2b4bb69c5a3f6e"><div class="ttname"><a href="../../d2/de9/classFuncionario.html#a93767189bf19980f4d2b4bb69c5a3f6e">Funcionario::setDataingresso</a></div><div class="ttdeci">void setDataingresso(Data ingressoEmpresa)</div><div class="ttdoc">Define a data de ingresso do Funcionário na empresa.</div><div class="ttdef"><b>Definição</b> funcionario.cpp:26</div></div>
+<div class="ttc" id="aclassFuncionario_html_a98d5aef3daa877847e45e6ff34c7dcf8"><div class="ttname"><a href="../../d2/de9/classFuncionario.html#a98d5aef3daa877847e45e6ff34c7dcf8">Funcionario::getSalario</a></div><div class="ttdeci">float getSalario()</div><div class="ttdoc">Obtém o valor do salário do Funcionário.</div><div class="ttdef"><b>Definição</b> funcionario.cpp:6</div></div>
+<div class="ttc" id="aclassFuncionario_html_aa856c33b14140e29182dd8c3893ad6ec"><div class="ttname"><a href="../../d2/de9/classFuncionario.html#aa856c33b14140e29182dd8c3893ad6ec">Funcionario::getMatricula</a></div><div class="ttdeci">std::string getMatricula()</div><div class="ttdoc">Obtém a matrícula do Funcionário.</div><div class="ttdef"><b>Definição</b> funcionario.cpp:10</div></div>
+<div class="ttc" id="aclassFuncionario_html_ac9ddaedaa41e63ddd1a30f68c992bdfb"><div class="ttname"><a href="../../d2/de9/classFuncionario.html#ac9ddaedaa41e63ddd1a30f68c992bdfb">Funcionario::setMatricula</a></div><div class="ttdeci">void setMatricula(std::string matricula)</div><div class="ttdoc">Define a matrícula do Funcionário.</div><div class="ttdef"><b>Definição</b> funcionario.cpp:22</div></div>
+<div class="ttc" id="aclassFuncionario_html_ae36c15cd6c61177d50cc6bf5b96c05a6"><div class="ttname"><a href="../../d2/de9/classFuncionario.html#ae36c15cd6c61177d50cc6bf5b96c05a6">Funcionario::calcularSalario</a></div><div class="ttdeci">virtual float calcularSalario(int diasFaltas)=0</div><div class="ttdoc">Calcula o salário do Funcionário considerando os dias de falta.</div></div>
+<div class="ttc" id="aclassFuncionario_html_ae8ecbd719934a689316fe307baf11eb9"><div class="ttname"><a href="../../d2/de9/classFuncionario.html#ae8ecbd719934a689316fe307baf11eb9">Funcionario::getDiasFaltas</a></div><div class="ttdeci">int getDiasFaltas()</div><div class="ttdoc">Obtém o número de dias de faltas do Funcionário.</div><div class="ttdef"><b>Definição</b> funcionario.cpp:30</div></div>
+<div class="ttc" id="astructData_html"><div class="ttname"><a href="../../d4/ddc/structData.html">Data</a></div><div class="ttdoc">Estrutura que representa uma data.</div><div class="ttdef"><b>Definição</b> util.hpp:15</div></div>
+<div class="ttc" id="autil_8hpp_html"><div class="ttname"><a href="../../d0/d3f/util_8hpp.html">util.hpp</a></div><div class="ttdoc">Contém a definição dos structs Data e Endereço.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

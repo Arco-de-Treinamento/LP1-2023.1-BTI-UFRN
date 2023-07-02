@@ -1,0 +1,189 @@
+\doxysection{Referência da Classe Gerente}
+\hypertarget{classGerente}{}\label{classGerente}\index{Gerente@{Gerente}}
+
+
+Classe que representa um gerente.  
+
+
+
+
+{\ttfamily \#include $<$gerente.\+hpp$>$}
+
+Diagrama de hierarquia da classe Gerente\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d2/d7d/classGerente}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGerente_a02847f6297c4571cd954005d5dace25b}\label{classGerente_a02847f6297c4571cd954005d5dace25b} 
+{\bfseries Gerente} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{classGerente}{Gerente}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGerente_a6de5ea06a61305e526f4224f6e38a4a3}{Gerente}} (float participacao\+Lucros)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classGerente}{Gerente}. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGerente_a63ce63a22723ff9083dd172302b23367}{get\+Participacao\+Lucros}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a participação nos lucros do gerente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}{set\+Participacao\+Lucros}} (float participacao\+Lucros)
+\begin{DoxyCompactList}\small\item\em Define a participação nos lucros do gerente. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGerente_a6b6c4cde79c813d33b3a7e8dbbab28ee}{calcular\+Salario}} (int dias\+Faltas)
+\begin{DoxyCompactList}\small\item\em Calcula o salário do gerente considerando os dias de falta. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGerente_a64992131f44753a797bc51598e308fce}{calcular\+Recisao}} (\mbox{\hyperlink{structData}{Data}} desligamento)
+\begin{DoxyCompactList}\small\item\em Calcula o valor da rescisão do gerente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classPessoa}{Pessoa}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Pessoa} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{classPessoa}{Pessoa}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPessoa_a6048c812523c713221499a01cb84dc0d}{Pessoa}} (std\+::string nome, std\+::string cpf, \mbox{\hyperlink{structData}{Data}} data\+Nascimento, \mbox{\hyperlink{structEndereco}{Endereco}} endereco\+Pessoal, std\+::string estado\+Civil, int qtd\+Filhos)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classPessoa}{Pessoa}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPessoa_aedeca9c83ea13db9c487ceb48ac37da7}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome da pessoa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPessoa_a53c13519e7f3bfb6c2fef3db2f4a5f5c}{get\+Cpf}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o CPF da pessoa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{classPessoa_a0a73a68c863abea0d280954362cf4ce4}{get\+Data\+Nascimento}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a data de nascimento da pessoa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structEndereco}{Endereco}} \mbox{\hyperlink{classPessoa_acda4019383902e8e320b3e38b61f83c8}{get\+Endereco}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o endereço pessoal da pessoa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPessoa_ac96188d156d31fd01bc8782b7a27ee4c}{get\+Estado\+Civil}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o estado civil da pessoa. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPessoa_a6c82ae8565b421884bbaaae161fb125f}{get\+Qtd\+Filhos}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a quantidade de filhos da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPessoa_a26074576a426b510ff59165b05031f57}{set\+Nome}} (std\+::string nome)
+\begin{DoxyCompactList}\small\item\em Define o nome da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPessoa_a63d922c3aaf98fef19aeaf4353b0c718}{set\+Cpf}} (std\+::string cpf)
+\begin{DoxyCompactList}\small\item\em Define o CPF da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPessoa_a2c1ac1810b13a6ff9ff7cb6cba44c2df}{set\+Data\+Nascimento}} (\mbox{\hyperlink{structData}{Data}} data\+Nascimento)
+\begin{DoxyCompactList}\small\item\em Define a data de nascimento da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPessoa_a405957d3b7a8f9290c928eb3af6749a0}{set\+Endereco}} (\mbox{\hyperlink{structEndereco}{Endereco}} endereco\+Pessoal)
+\begin{DoxyCompactList}\small\item\em Define o endereço pessoal da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPessoa_a3d4c3e2b7177be168d556e698f401b65}{set\+Estado\+Civil}} (std\+::string estado\+Civil)
+\begin{DoxyCompactList}\small\item\em Define o estado civil da pessoa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPessoa_a5349c468a5bbcf623dd6cf818ccfaf1c}{set\+Qtd\+Filhos}} (int qtd\+Filhos)
+\begin{DoxyCompactList}\small\item\em Define a quantidade de filhos da pessoa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classFuncionario}{Funcionario}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classFuncionario_a98d5aef3daa877847e45e6ff34c7dcf8}{get\+Salario}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o valor do salário do Funcionário. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFuncionario_aa856c33b14140e29182dd8c3893ad6ec}{get\+Matricula}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a matrícula do Funcionário. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structData}{Data}} \mbox{\hyperlink{classFuncionario_a177dc35b03e4b5c6153f1851b135ca03}{get\+Dataingresso}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a data de ingresso do Funcionário na empresa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFuncionario_a22aca68fbdc2f1dec77ba429eabec4d3}{set\+Salario}} (float salario)
+\begin{DoxyCompactList}\small\item\em Define o valor do salário do Funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFuncionario_ac9ddaedaa41e63ddd1a30f68c992bdfb}{set\+Matricula}} (std\+::string matricula)
+\begin{DoxyCompactList}\small\item\em Define a matrícula do Funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFuncionario_a93767189bf19980f4d2b4bb69c5a3f6e}{set\+Dataingresso}} (\mbox{\hyperlink{structData}{Data}} ingresso\+Empresa)
+\begin{DoxyCompactList}\small\item\em Define a data de ingresso do Funcionário na empresa. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFuncionario_ae8ecbd719934a689316fe307baf11eb9}{get\+Dias\+Faltas}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o número de dias de faltas do Funcionário. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFuncionario_a4c0675b260f197dcb47d52f8b4542e9f}{set\+Dias\+Faltas}} (int dias\+Faltas)
+\begin{DoxyCompactList}\small\item\em Define o número de dias de faltas do Funcionário. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um gerente. 
+
+Classe que representa um gerente.
+
+A classe \doxylink{classGerente}{Gerente} herda as características da classe \doxylink{classPessoa}{Pessoa} e da classe \doxylink{classFuncionario}{Funcionario}. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{classGerente_a6de5ea06a61305e526f4224f6e38a4a3}\label{classGerente_a6de5ea06a61305e526f4224f6e38a4a3} 
+\index{Gerente@{Gerente}!Gerente@{Gerente}}
+\index{Gerente@{Gerente}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{Gerente()}{Gerente()}}
+{\footnotesize\ttfamily Gerente\+::\+Gerente (\begin{DoxyParamCaption}\item[{float}]{participacao\+Lucros }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxylink{classGerente}{Gerente}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em participacao\+Lucros} & A participação nos lucros do gerente. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classGerente_a64992131f44753a797bc51598e308fce}\label{classGerente_a64992131f44753a797bc51598e308fce} 
+\index{Gerente@{Gerente}!calcularRecisao@{calcularRecisao}}
+\index{calcularRecisao@{calcularRecisao}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{calcularRecisao()}{calcularRecisao()}}
+{\footnotesize\ttfamily float Gerente\+::calcular\+Recisao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structData}{Data}}}]{desligamento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calcula o valor da rescisão do gerente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em desligamento} & A data de desligamento do gerente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O valor da rescisão do gerente. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classFuncionario_a1aa96ac8c4f6c5e9af559d9b94d37b46}{Funcionario}}.
+
+\Hypertarget{classGerente_a6b6c4cde79c813d33b3a7e8dbbab28ee}\label{classGerente_a6b6c4cde79c813d33b3a7e8dbbab28ee} 
+\index{Gerente@{Gerente}!calcularSalario@{calcularSalario}}
+\index{calcularSalario@{calcularSalario}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{calcularSalario()}{calcularSalario()}}
+{\footnotesize\ttfamily float Gerente\+::calcular\+Salario (\begin{DoxyParamCaption}\item[{int}]{dias\+Faltas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Calcula o salário do gerente considerando os dias de falta. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em dias\+Faltas} & O número de dias de falta do gerente. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O salário do gerente no mês. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classFuncionario_ae36c15cd6c61177d50cc6bf5b96c05a6}{Funcionario}}.
+
+\Hypertarget{classGerente_a63ce63a22723ff9083dd172302b23367}\label{classGerente_a63ce63a22723ff9083dd172302b23367} 
+\index{Gerente@{Gerente}!getParticipacaoLucros@{getParticipacaoLucros}}
+\index{getParticipacaoLucros@{getParticipacaoLucros}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{getParticipacaoLucros()}{getParticipacaoLucros()}}
+{\footnotesize\ttfamily float Gerente\+::get\+Participacao\+Lucros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém a participação nos lucros do gerente. 
+
+\begin{DoxyReturn}{Retorna}
+A participação nos lucros. 
+\end{DoxyReturn}
+\Hypertarget{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4}\label{classGerente_aa0cdd8949bbc2a3208cb0cedc38e3af4} 
+\index{Gerente@{Gerente}!setParticipacaoLucros@{setParticipacaoLucros}}
+\index{setParticipacaoLucros@{setParticipacaoLucros}!Gerente@{Gerente}}
+\doxysubsubsection{\texorpdfstring{setParticipacaoLucros()}{setParticipacaoLucros()}}
+{\footnotesize\ttfamily void Gerente\+::set\+Participacao\+Lucros (\begin{DoxyParamCaption}\item[{float}]{participacao\+Lucros }\end{DoxyParamCaption})}
+
+
+
+Define a participação nos lucros do gerente. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em participacao\+Lucros} & A participação nos lucros. \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+hpps/\mbox{\hyperlink{gerente_8hpp}{gerente.\+hpp}}\item 
+cpps/gerente.\+cpp\end{DoxyCompactItemize}
